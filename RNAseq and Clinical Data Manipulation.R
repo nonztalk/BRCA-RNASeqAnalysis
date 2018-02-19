@@ -82,6 +82,7 @@ matrixModel$subtype <- apply(matrixModel[, 1358:1360], 1, subtypeName)
 
 # heatmap
 # do not show NPE
+library(pheatmap)
 data_id_situation <- data.frame(patientID = colnames(data_tumor_with_clinic),
                                 subtype = vapply(colnames(data_tumor_with_clinic),
                                                  function(x) {
